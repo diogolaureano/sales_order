@@ -5,4 +5,5 @@ from app import views
 urlpatterns = [
     # rota, view responsavel, nome de referencia
     path('',views.home,name='home'),
+    path('pedidos',views.pedidos,name='pedidos')
 ]

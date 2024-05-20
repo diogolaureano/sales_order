@@ -1,0 +1,12 @@
+{% extends 'pedidos/base.html' %}
+{% block conteudo %}
+<form action="{% url 'pedidos' %}" method="post">
+  {% csrf_token %}
+  <div style="text-align: center;" class="container">
+    <h1>Cadastro de Pedidos de Vendas</h1>
+    Pedido <input name="pedido" class="form-control-sm" type="text">
+    Cliente <input name="cliente" class="form-control-sm" type="text">
+    <button class="form-control-sm">Enviar</button>
+  </div>
+</form>
+{% endblock %}
