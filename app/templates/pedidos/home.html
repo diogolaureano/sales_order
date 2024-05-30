@@ -3,18 +3,80 @@
 <form action="{% url 'pedidos' %}" method="post">
   {% csrf_token %}
   <div style="text-align: center;" class="container">
-    <h1>Cadastro de Pedidos de Vendas</h1>
-    Data da venda <input name="data_da_venda" class="form-control-sm" type="text">
-    Cliente <input name="cliente" class="form-control-sm" type="text">
-    Produto <input name="produto" class="form-control-sm" type="text">
-    Quantidade <input name="quantidade" class="form-control-sm" type="text">
-    Valor de venda <input name="valor_de_venda" class="form-control-sm" type="text">
-    Taxas <input name="taxas" class="form-control-sm" type="text">
-    Valor liquido <input name="valor_liquido" class="form-control-sm" type="text">
-    Prazo <input name="prazo" class="form-control-sm" type="text">
-    Canal de venda <input name="canal_de_venda" class="form-control-sm" type="text">
-    Codigo de rastreio <input name="codigo_de_rastreio" class="form-control-sm" type="text">
-    <button class="form-control-sm">Enviar</button>
+    <h2>Cadastro de Pedidos de Vendas</h2>
+    <div class="row g-2">
+      <div class="col-md-6">
+        <div class="form-floating mb-3">
+          <input id="date" type="date" name="data_da_venda" class="form-control">
+          <label>Data da venda</label>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-floating mb-3">
+          <input type="text" name="cliente" class="form-control">
+          <label>Cliente</label>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-floating mb-3">
+          <input type="text" name="produto" class="form-control">
+          <label>Produto</label>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-floating mb-3">
+          <input type="number" name="quantidade" class="form-control">
+          <label>Quantidade</label>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-floating mb-3">
+          <input type="number" name="valor_de_venda" class="form-control">
+          <label>Valor de venda</label>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-floating mb-3">
+          <input type="number" name="taxas" class="form-control">
+          <label>Taxas</label>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-floating mb-3">
+          <input type="number" name="valor_liquido" class="form-control">
+          <label>Valor liquido</label>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-floating mb-3">
+          <input type="date" name="prazo" class="form-control">
+          <label>Prazo</label>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-floating mb-3">
+          <!--   <input type="text" name="canal_de_venda" class="form-control">   -->
+          <select type="text" name="canal_de_venda" class="form-control" class="form-select" aria-label="Default select example">
+            <option selected></option>
+            <option value="WhtasApp">WhtasApp</option>
+            <option value="Instagram">Instagram</option>
+            <option value="Mercado_Livre">Mercado Livre</option>
+            <option value="Shopee">Shopee</option>
+            <option value="Elo7">Elo7</option>
+          </select>
+          <label>Canal de venda</label>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-floating mb-3">
+          <input type="text" name="codigo_de_rastreio" class="form-control">
+          <label>Codigo de rastreio</label>
+        </div>
+      </div>
+      <div>
+        <button class="form-control-sm">Enviar</button>
+      </div>
+    </div>
   </div>
 </form>
 {% endblock %}
