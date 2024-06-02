@@ -3,7 +3,6 @@ from .models import Pedido
 from .models import Movimentacao
 
 # Create your views here.
-
 def home(request):
     return render(request, 'pedidos/home.html')
 
