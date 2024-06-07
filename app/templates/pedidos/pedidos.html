@@ -4,31 +4,15 @@
     <h1>Pedidos</h1>
     <table class="table table-bordered table-striped">
         <tr>
-            <th>Numero do Pedido</th>
-            <th>Data da venda</th>
-            <th>Cliente</th>
-            <th>Produto</th>
-            <th>Quantidade</th>
-            <th>Valor de venda</th>
-            <th>Taxas</th>
-            <th>Valor liquido</th>
-            <th>Prazo</th>
-            <th>Canal de venda</th>
-            <th>Codigo de rastreio</th>
+            <th>id</th>
+            <th>pedido</th>
+            <th>cliente</th>
         </tr>
         {% for pedido in pedidos %}
         <tr>
             <td>{{pedido.id_pedido}}</td>
-            <td>{{pedido.data_da_venda}}</td>
+            <td>{{pedido.pedido}}</td>
             <td>{{pedido.cliente}}</td>
-            <td>{{pedido.produto}}</td>
-            <td>{{pedido.quantidade}}</td>
-            <td>{{pedido.valor_de_venda}}</td>
-            <td>{{pedido.taxas}}</td>
-            <td>{{pedido.valor_liquido}}</td>
-            <td>{{pedido.prazo}}</td>
-            <td>{{pedido.canal_de_venda}}</td>
-            <td>{{pedido.codigo_de_rastreio}}</td>
         </tr>
         {% endfor %}
     </table>
