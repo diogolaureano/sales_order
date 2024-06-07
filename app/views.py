@@ -1,8 +1,8 @@
 from django.shortcuts import render # type: ignore
 from .models import Pedido
+from .models import Movimentacao
 
 # Create your views here.
-
 def home(request):
     return render(request, 'pedidos/home.html')
 
@@ -25,7 +25,8 @@ def pedidos(request):
     #Exibir pedidos 
     pedidos = {
         'pedidos': Pedido.objects.all()
+        
     }
-
+       
     #Retornar o dados para a pagina
     return render(request,'pedidos/pedidos.html',pedidos)
